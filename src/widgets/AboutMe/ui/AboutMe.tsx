@@ -30,14 +30,14 @@ export const AboutMe: FC<AboutMeProps> = ({ className }) => {
         )}
       >
         <div className="space-y-1">
-          <Text variant="display-4">Malikov Abduaziz</Text>
+          <Text variant="display-4">Abduvohidov Abdulloh</Text>
           <Text variant="body-2" className="text-gray-400">
             {t("aboutme")}
           </Text>
         </div>
 
         <Link
-          href={"https://t.me/malikovabduaziz"}
+          href={"https://t.me/aaanvarovic"}
           className="block sm:hidden mt-4"
         >
           <Button className="w-full text-blue-400 hover:bg-blue-400 hover:text-white">
@@ -49,7 +49,7 @@ export const AboutMe: FC<AboutMeProps> = ({ className }) => {
         <Separator className="my-4" />
         <div className="flex h-5 items-center space-x-4 text-sm">
           <Link
-            href={"https://t.me/malikovabduaziz"}
+            href={"https://t.me/aaanvarovic"}
             className="hidden sm:block"
           >
             <Button className="w-full text-blue-400 hover:bg-blue-400 hover:text-white">
@@ -58,19 +58,19 @@ export const AboutMe: FC<AboutMeProps> = ({ className }) => {
             </Button>
           </Link>
           <Separator orientation="vertical" className="hidden sm:block" />
-          <Link href={"https://www.youtube.com/@mlkvazka1"} target="_blank">
+          <Link href={"https://www.notion.so/2a05002e18148040b33dce19c3da9ea7?source=copy_link"} target="_blank">
             <Text variant="body-1" className="text-gray-400 hover:text-white">
-              Youtube
+              CV
             </Text>
           </Link>
           <Separator orientation="vertical" />
-          <Link href={"https://www.instagram.com/azka.aedits?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="} target="_blank">
+          <Link href={"https://www.instagram.com/aaanvarovic"} target="_blank">
             <Text variant="body-1" className="text-gray-400 hover:text-white">
               Instagram
             </Text>
           </Link>
           <Separator orientation="vertical" />
-          <Link href={"https://t.me/azkaedits"} target="_blank">
+          <Link href={"https://t.me/aaanvarovic"} target="_blank">
             <Text variant="body-1" className="text-gray-400 hover:text-white">
               Telegram
             </Text>

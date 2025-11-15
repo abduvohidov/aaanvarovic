@@ -11,7 +11,7 @@ export const Logo: FC<LogoProps> = ({ className }) => {
   return (
     <Link href={"/"}>
       <Text variant="code-inline-2" className={cn(className, "italic")}>
-        malikovabduaziz
+        aaanvarovic
       </Text>
     </Link>
   );
