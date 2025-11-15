@@ -64,15 +64,15 @@ export const AboutMe: FC<AboutMeProps> = ({ className }) => {
             </Text>
           </Link>
           <Separator orientation="vertical" />
-          <Link href={"https://www.instagram.com/aaanvarovic"} target="_blank">
+          <Link href={"https://www.linkedin.com/in/abdulloh-abduvohidov-5a79b325a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"} target="_blank">
             <Text variant="body-1" className="text-gray-400 hover:text-white">
-              Instagram
+              LinkedIn
             </Text>
           </Link>
           <Separator orientation="vertical" />
-          <Link href={"https://t.me/aaanvarovic"} target="_blank">
+          <Link href={"tel:+998974250080"} target="_blank">
             <Text variant="body-1" className="text-gray-400 hover:text-white">
-              Telegram
+              +998 97 425 00 80
             </Text>
           </Link>
         </div>

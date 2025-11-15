@@ -1,19 +1,20 @@
 import { SocialMediaListCard } from "@/features/SocialMediaListCard";
+import { useJobs } from "@/shared/constants/jobs";
 import { SocialModel, useSocials } from "@/shared/constants/socials";
 import { cn } from "@/shared/lib/cn";
 import { Text } from "@/shared/ui/Text";
 import { useTranslations } from "next-intl";
 import { FC } from "react";
 
-interface PortfolioProps {
+interface ExperienceProps {
   className?: string;
 }
 
-export const Portfolio: FC<PortfolioProps> = ({ className }) => {
+export const Experience: FC<ExperienceProps> = ({ className }) => {
   const t = useTranslations("portfolio");
-  const { data: socials } = useSocials();
+  const { data: professionals } = useJobs();
 
-  if (!socials || socials.length === 0) return null;
+  if (!professionals || professionals.length === 0) return null;
 
   return (
     <div className={cn(className)}>
@@ -27,14 +28,7 @@ export const Portfolio: FC<PortfolioProps> = ({ className }) => {
         {t("toSocialLinks")}
       </Text>
       <div className="max-w-screen-sm mx-auto grid md:grid-cols-2 grid-cols-1 gap-6 md:mt-12 mt-4">
-        {socials.map((item, index) => (
-          <SocialMediaListCard
-            key={index}
-            icon={item.icon}
-            text={item.text}
-            link={item.link}
-          />
-        ))}
+        
       </div>
     </div>
   );

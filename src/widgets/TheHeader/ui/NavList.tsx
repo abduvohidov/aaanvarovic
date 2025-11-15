@@ -29,7 +29,7 @@ export const NavList: React.FC<NavListProps> = (props) => {
           <NavigationMenuLink
             className={cn(
               navigationMenuTriggerStyle(),
-              pathname === href && "bg-accent"
+              pathname === href && "bg-accent", label === "CV" && "text-blue-300 text-xl"
             )}
           >
             {label}

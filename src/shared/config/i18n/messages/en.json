@@ -1,8 +1,8 @@
 {
   "header": {
     "main": "Main",
-    "portfolio": "Portfolio",
-    "services": "Services"
+    "experience": "Experience",
+    "projects": "Projects"
   },
   "main": {
     "aboutme": "Three years of experience in IT. I worked in development at Faktura and IT Park. I'm studying IT project management at Yandex.Practicum and looking for interesting projects to launch my career as an IT project manager.",
