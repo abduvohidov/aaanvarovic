@@ -30,8 +30,8 @@ export const AboutMe: FC<AboutMeProps> = ({ className }) => {
         )}
       >
         <div className="space-y-1">
-          <Text variant="display-4">Abduvohidov Abdulloh</Text>
-          <Text variant="body-2" className="text-gray-400">
+          <Text variant="display-4">{t("name")}</Text>
+          <Text variant="body-2" className="text-gray-400 mt-4">
             {t("aboutme")}
           </Text>
         </div>
