@@ -1,12 +1,9 @@
 export interface NavListType {
-  href: string;
+  id: string;
   label: string;
 }
-[];
 
-export const navlist = (t: (key: string) => string): NavListType[] => [
-  { href: "https://www.notion.so/2a05002e18148040b33dce19c3da9ea7?source=copy_link", label: "CV" },
-  { href: "/", label: t("main") },
-  // { href: "/experience", label: t("experience") },
-  // { href: "/projects", label: t("projects") },
-];
+export const SECTION_IDS = ["about", "experience", "projects", "skills", "contact"] as const;
+
+export const navlist = (t: (key: (typeof SECTION_IDS)[number]) => string): NavListType[] =>
+  SECTION_IDS.map((id) => ({ id, label: t(id) }));

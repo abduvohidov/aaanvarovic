@@ -1,24 +1,33 @@
-import { cn } from "@/shared/lib/cn";
-import { Footer, FooterBottom } from "@/shared/ui/footer";
-import { Text } from "@/shared/ui/Text";
+import { contacts } from "@/shared/content";
+import { Logo } from "@/shared/ui/Logo";
+import { ArrowUp } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
-interface FooterProps {
-  copyright?: string;
-  className?: string;
-}
+export default async function TheFooter() {
+  const t = await getTranslations("footer");
+  const year = new Date().getFullYear();
 
-export default function TheFooter({
-  copyright = "© aaanvarovic. All rights reserved",
-  className,
-}: FooterProps) {
   return (
-    <footer className={cn("bg-background w-full px-4", className)}>
-      <div className="container mx-auto flex justify-center items-center">
-        <Footer>
-          <FooterBottom className="py-5">
-            <Text variant="body-1">{copyright}</Text>
-          </FooterBottom>
-        </Footer>
+    <footer className="border-t">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 px-5 py-8 text-sm text-muted-foreground sm:flex-row md:px-8">
+        <div className="flex items-center gap-4">
+          <Logo />
+          <span>
+            © {year} · {t("rights")}
+          </span>
+        </div>
+        <div className="flex items-center gap-5">
+          <a href={contacts.telegram} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
+            Telegram
+          </a>
+          <a href={contacts.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
+            LinkedIn
+          </a>
+          <a href="#top" className="group inline-flex items-center gap-1.5 hover:text-foreground">
+            {t("top")}
+            <ArrowUp className="size-3.5 transition-transform group-hover:-translate-y-0.5" />
+          </a>
+        </div>
       </div>
     </footer>
   );
